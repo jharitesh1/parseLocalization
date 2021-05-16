@@ -5,14 +5,18 @@ import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 class ParseLocalizedJson(val appContext: Context) {
     private val TAG = ParseLocalizedJson::class.simpleName
     private val JSON_LOCALIZATION = "localization"
     private val JSON_TYPE = "type"
     private val JSON_KEY = "keyID"
     private val JSON_VALUE = "value"
-    val database = LocalizationDatabase.getInstance(appContext);
-    val dao: LocalizationDao = database.locaLizationDao();
+    val database = LocalizationDatabase.getInstance(appContext)
+    val dao: LocalizationDao = database.locaLizationDao()
 
     fun parseLocalizationJson(jsonFile: String?) {
         try {

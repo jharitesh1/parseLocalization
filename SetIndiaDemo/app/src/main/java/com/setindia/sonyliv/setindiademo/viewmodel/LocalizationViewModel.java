@@ -6,7 +6,6 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.setindia.sonyliv.setindiademo.base.LocalizationApplication;
 import com.setindia.sonyliv.setindiademo.model.LocalizationEntity;
 import com.setindia.sonyliv.setindiademo.model.LocalizationRepository;
 
@@ -14,6 +13,10 @@ import java.util.List;
 
 import io.reactivex.annotations.NonNull;
 
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 public class LocalizationViewModel extends AndroidViewModel {
     private final LocalizationRepository repository;
     private final LiveData<List<LocalizationEntity>> allEnteries;

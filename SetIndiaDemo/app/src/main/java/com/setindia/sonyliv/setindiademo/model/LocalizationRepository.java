@@ -6,10 +6,12 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import com.setindia.sonyliv.setindiademo.base.LocalizationApplication;
-
 import java.util.List;
 
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 public class LocalizationRepository {
     private final LocalizationDao localizationDao;
     private final LiveData<List<LocalizationEntity>> allEnteries;

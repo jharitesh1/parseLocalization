@@ -4,15 +4,19 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 @Entity(tableName = Constants.LOCALIZATION_TABLE)
 public class LocalizationEntity {
 
-    @PrimaryKey(autoGenerate = true)
-    private int id;
     private final String locale;
     private final String keyID;
     @ColumnInfo(name = "value")
     private final String value;
+    @PrimaryKey(autoGenerate = true)
+    private int id;
 
     public LocalizationEntity(String locale, String keyID, String value) {
         this.locale = locale;
@@ -20,12 +24,12 @@ public class LocalizationEntity {
         this.value = value;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLocale() {

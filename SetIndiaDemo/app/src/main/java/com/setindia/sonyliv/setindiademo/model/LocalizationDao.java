@@ -11,6 +11,10 @@ import androidx.room.Update;
 
 import java.util.List;
 
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 @Dao
 public interface LocalizationDao {
 

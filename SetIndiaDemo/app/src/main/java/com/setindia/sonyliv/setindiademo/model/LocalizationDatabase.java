@@ -9,6 +9,10 @@ import androidx.room.RoomDatabase;
 import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 @Database(entities = {LocalizationEntity.class}, version = 2)
 public abstract class LocalizationDatabase extends RoomDatabase {
 

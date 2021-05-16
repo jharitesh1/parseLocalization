@@ -15,7 +15,10 @@ import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-
+/*
+    author: ritesh
+    date: 16 May 2021
+ */
 class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
     private val TAG = SetIndiaMainScreenActivity::class.simpleName
     var locale: String = "en"
@@ -34,9 +37,9 @@ class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
         btnChinese = findViewById(R.id.btnChina)
         txtHelloWorld = findViewById(R.id.txtHelloWorld)
 
-        btnEnglish.setOnClickListener(this);
-        btnHindi.setOnClickListener(this);
-        btnChinese.setOnClickListener(this);
+        btnEnglish.setOnClickListener(this)
+        btnHindi.setOnClickListener(this)
+        btnChinese.setOnClickListener(this)
         localizationViewModel = ViewModelProviders.of(this).get(LocalizationViewModel::class.java)
     }
 
@@ -44,7 +47,7 @@ class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
         var entity: LocalizationEntity?
         var titleText: String?
 
-        when(v?.id) {
+        when (v?.id) {
             R.id.btnEnglish -> {
                 locale = "en"
             }
@@ -61,10 +64,10 @@ class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
             titleText = entity?.value
 
             withContext(Dispatchers.Main) {
-                if(titleText.isNullOrEmpty())
+                if (titleText.isNullOrEmpty())
                     txtHelloWorld.setText(R.string.title)
                 else
-                    txtHelloWorld.setText(titleText)
+                    txtHelloWorld.text = titleText
 
             }
         }
