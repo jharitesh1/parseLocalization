@@ -10,4 +10,11 @@ First commit :
 
 Second commit: Refactoring parse logic
 
+Third commit: 
+    1) Room database
+    2) Entiry details
+    3) Repository wrapper for standarize API and high level of abstraction
+    4) Live data 
+    5) DAO
+
 
