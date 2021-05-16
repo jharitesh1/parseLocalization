@@ -23,9 +23,9 @@ public interface LocalizationDao {
     @Delete
     void delete(LocalizationEntity entity);
 
-    @Query("DELETE FROM Constants.LOCALIZATION_TABLE")
-    void deleteAllNotes();
+    @Query("DELETE FROM " + Constants.LOCALIZATION_TABLE)
+    void deleteAllEnteries();
 
-    @Query("SELECT * FROM Constants.LOCALIZATION_TABLE")
+    @Query("SELECT * FROM " + Constants.LOCALIZATION_TABLE)
     LiveData<List<LocalizationEntity>> getAllEnteries();
 }

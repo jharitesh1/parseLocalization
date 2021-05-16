@@ -30,7 +30,7 @@ public class LocalizationRepository {
         new DeleteAsync(localizationDao).execute(noteEntity);
     }
 
-    public void deleteAllNotes() {
+    public void deleteAllEnteries() {
         new DeleteAllAsync(localizationDao).execute();
     }
 
@@ -89,7 +89,7 @@ public class LocalizationRepository {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            noteDao.deleteAllNotes();
+            noteDao.deleteAllEnteries();
             return null;
         }
     }
