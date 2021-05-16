@@ -17,4 +17,7 @@ Third commit:
     4) Live data 
     5) DAO
 
+Fourth commit:
+    1) View model
+
 
