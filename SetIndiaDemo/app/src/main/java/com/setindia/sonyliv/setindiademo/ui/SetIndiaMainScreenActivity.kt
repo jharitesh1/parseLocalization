@@ -38,18 +38,6 @@ class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
         btnHindi.setOnClickListener(this);
         btnChinese.setOnClickListener(this);
         localizationViewModel = ViewModelProviders.of(this).get(LocalizationViewModel::class.java)
-
-//        localizationViewModel = ViewModelProvider(this,
-//                AndroidViewModelFactory(application)).get(LocalizationViewModel::class.java)
-
-        //        localizationViewModel.getAllNotes().observe(this, Observer<List<Any?>?> {
-//            -> adapter.submitList(noteEntities)
-//        })
-    }
-
-    override fun onResume() {
-        super.onResume()
-
     }
 
     override fun onClick(v: View?) {
