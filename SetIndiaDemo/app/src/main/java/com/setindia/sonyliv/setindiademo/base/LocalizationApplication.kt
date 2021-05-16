@@ -15,7 +15,7 @@ class LocalizationApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        CoroutineScope(Dispatchers.Default).launch {
+        CoroutineScope(Dispatchers.IO).launch {
             readAndPraseLocalization()
         }
 

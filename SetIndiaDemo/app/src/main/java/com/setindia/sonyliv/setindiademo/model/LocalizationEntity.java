@@ -10,7 +10,6 @@ public class LocalizationEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private final String locale;
-    @ColumnInfo(name = "keyID")
     private final String keyID;
     @ColumnInfo(name = "value")
     private final String value;

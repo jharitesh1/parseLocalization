@@ -9,7 +9,7 @@ class ParseLocalizedJson(val appContext: Context) {
     private val TAG = ParseLocalizedJson::class.simpleName
     private val JSON_LOCALIZATION = "localization"
     private val JSON_TYPE = "type"
-    private val JSON_KEY = "key"
+    private val JSON_KEY = "keyID"
     private val JSON_VALUE = "value"
     val database = LocalizationDatabase.getInstance(appContext);
     val dao: LocalizationDao = database.locaLizationDao();

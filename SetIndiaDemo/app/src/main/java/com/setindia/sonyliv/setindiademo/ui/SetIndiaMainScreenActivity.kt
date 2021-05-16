@@ -5,11 +5,15 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.setindia.sonyliv.setindiademo.R
 import com.setindia.sonyliv.setindiademo.model.LocalizationEntity
 import com.setindia.sonyliv.setindiademo.viewmodel.LocalizationViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
@@ -34,6 +38,9 @@ class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
         btnHindi.setOnClickListener(this);
         btnChinese.setOnClickListener(this);
         localizationViewModel = ViewModelProviders.of(this).get(LocalizationViewModel::class.java)
+
+//        localizationViewModel = ViewModelProvider(this,
+//                AndroidViewModelFactory(application)).get(LocalizationViewModel::class.java)
 
         //        localizationViewModel.getAllNotes().observe(this, Observer<List<Any?>?> {
 //            -> adapter.submitList(noteEntities)
@@ -60,12 +67,18 @@ class SetIndiaMainScreenActivity : AppCompatActivity(), View.OnClickListener {
                 locale = "zh"
             }
         }
-        entity = localizationViewModel.getOneEntry(locale, "title")
-        titleText = entity?.value
 
-        if(titleText.isNullOrEmpty())
-            txtHelloWorld.setText(R.string.title)
-        else
-            txtHelloWorld.setText(titleText)
+        CoroutineScope(IO).launch {
+            entity = localizationViewModel.getOneEntry(locale, "title")
+            titleText = entity?.value
+
+            withContext(Dispatchers.Main) {
+                if(titleText.isNullOrEmpty())
+                    txtHelloWorld.setText(R.string.title)
+                else
+                    txtHelloWorld.setText(titleText)
+
+            }
+        }
     }
 }
