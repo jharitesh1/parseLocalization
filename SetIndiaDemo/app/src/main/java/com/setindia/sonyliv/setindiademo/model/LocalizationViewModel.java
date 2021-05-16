@@ -20,16 +20,16 @@ public class LocalizationViewModel extends AndroidViewModel {
         allEnteries = repository.getAllEnteries();
     }
 
-    public void insert(LocalizationEntity noteEntity) {
-        repository.insert(noteEntity);
+    public void insert(LocalizationEntity entity) {
+        repository.insert(entity);
     }
 
-    public void update(LocalizationEntity noteEntity) {
-        repository.update(noteEntity);
+    public void update(LocalizationEntity entity) {
+        repository.update(entity);
     }
 
-    public void delete(LocalizationEntity noteEntity) {
-        repository.delete(noteEntity);
+    public void delete(LocalizationEntity entity) {
+        repository.delete(entity);
     }
 
     public void deleteAllEnteries() {

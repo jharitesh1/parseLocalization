@@ -1,15 +1,18 @@
 package com.setindia.sonyliv.setindiademo.model
 
+import android.content.Context
 import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 
-object ParseLocalizedJson {
+class ParseLocalizedJson(val appContext: Context) {
     private val TAG = ParseLocalizedJson::class.simpleName
     private val JSON_LOCALIZATION = "localization"
     private val JSON_TYPE = "type"
     private val JSON_KEY = "key"
     private val JSON_VALUE = "value"
+    val database = LocalizationDatabase.getInstance(appContext);
+    val dao: LocalizationDao = database.locaLizationDao();
 
     fun parseLocalizationJson(jsonFile: String?) {
         try {
@@ -24,6 +27,9 @@ object ParseLocalizedJson {
                     val jsonObjectInner = content.optJSONObject(j)
                     val key = jsonObjectInner.optString(JSON_KEY)
                     val value = jsonObjectInner.optString(JSON_VALUE)
+
+                    val entity = LocalizationEntity(strType, key, value)
+                    dao.insert(entity)
 
                     Log.i(TAG, "strType : " + strType + " -- " + "key : " + key + " -- " + "value : " + value)
                 }

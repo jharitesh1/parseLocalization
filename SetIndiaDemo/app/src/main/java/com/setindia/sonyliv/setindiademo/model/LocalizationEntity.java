@@ -7,13 +7,13 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = Constants.LOCALIZATION_TABLE)
 public class LocalizationEntity {
 
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private final String locale;
     @ColumnInfo(name = "key")
     private final String key;
     @ColumnInfo(name = "value")
     private final String value;
-    @PrimaryKey(autoGenerate = true)
-    private int id;
 
     public LocalizationEntity(String locale, String key, String value) {
         this.locale = locale;
