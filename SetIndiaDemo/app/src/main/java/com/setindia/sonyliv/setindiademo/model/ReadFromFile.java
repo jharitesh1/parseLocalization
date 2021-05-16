@@ -1,11 +1,9 @@
 package com.setindia.sonyliv.setindiademo.model;
 
 import android.content.Context;
-import android.content.res.AssetFileDescriptor;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class ReadFromFile {
