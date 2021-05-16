@@ -1,5 +1,10 @@
 # parseLocalization
 
+Cloud URL for JSON - https://pastebin.com/raw/c7KrRbBL#
+author: Ritesh
+date: 16th May 2021
+Please see some screnshots at this level of github.
+
 First commit :
     initial code submit. This code contains below logic:
     1) Main screen with 3 buttons 
@@ -26,5 +31,11 @@ Fourth commit:
 
 6th commit:
     1) Fetching single localization value from DB and showing on UI
+
+7th commit:
+    1) Hosted json file on cloud- https://pastebin.com/raw/c7KrRbBL#
+    2) Fetching json from cloud 
+    3) refactore
+
 
 
