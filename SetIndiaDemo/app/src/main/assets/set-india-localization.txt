@@ -1,0 +1,31 @@
+{
+  "localization":
+  [
+      {
+        "type": "zh",
+        "zh": [
+          {
+            "key": "title",
+            "value": "你好，世界"
+          },
+          {
+            "key": "btnText",
+            "value": "中国人"
+          }
+        ]
+      },
+      {
+        "type": "hi",
+        "hi": [
+          {
+            "key": "title",
+            "value": "नमस्ते दुनिया"
+          },
+          {
+            "key": "btnText",
+            "value": "हिंदी"
+          }
+        ]
+      }
+  ]
+}

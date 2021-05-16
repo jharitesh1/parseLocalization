@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SetIndiaDemo</string>
+    <string name="strBtnTextHindi">Default</string>
+    <string name="strBtnTextEnglish">Hindi</string>
+    <string name="strBtnTextChina">Chinese</string>
+    <string name="txtTitle">Hello World</string>
+</resources>
