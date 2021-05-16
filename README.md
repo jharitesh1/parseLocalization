@@ -24,4 +24,7 @@ Fourth commit:
     1) New application class
     2) Adding parsed data to database
 
+6th commit:
+    1) Fetching single localization value from DB and showing on UI
+
 
