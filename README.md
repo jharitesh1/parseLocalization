@@ -8,3 +8,6 @@ First commit :
     4) parse json which is read at step 3
     5) print the json content in logs.
 
+Second commit: Refactoring parse logic
+
+
