@@ -5,11 +5,11 @@
         "type": "zh",
         "zh": [
           {
-            "key": "title",
+            "keyID": "title",
             "value": "你好，世界"
           },
           {
-            "key": "btnText",
+            "keyID": "btnText",
             "value": "中国人"
           }
         ]
@@ -18,11 +18,11 @@
         "type": "hi",
         "hi": [
           {
-            "key": "title",
+            "keyID": "title",
             "value": "नमस्ते दुनिया"
           },
           {
-            "key": "btnText",
+            "keyID": "btnText",
             "value": "हिंदी"
           }
         ]

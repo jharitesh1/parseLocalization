@@ -28,4 +28,8 @@ public interface LocalizationDao {
 
     @Query("SELECT * FROM " + Constants.LOCALIZATION_TABLE)
     LiveData<List<LocalizationEntity>> getAllEnteries();
+
+    @Query("SELECT * FROM localization_table WHERE locale LIKE :locales" +
+            " AND keyID LIKE :resKeys LIMIT 1")
+    LocalizationEntity getOneEntryValue(String locales, String resKeys);
 }

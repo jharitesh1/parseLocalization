@@ -34,6 +34,10 @@ public class LocalizationRepository {
         new DeleteAllAsync(localizationDao).execute();
     }
 
+    public LocalizationEntity getOneEntryValue(String locale, String key) {
+        return localizationDao.getOneEntryValue(locale, key);
+    }
+
     public LiveData<List<LocalizationEntity>> getAllEnteries() {
         return allEnteries;
     }

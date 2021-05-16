@@ -1,4 +1,4 @@
-package com.setindia.sonyliv.setindiademo
+package com.setindia.sonyliv.setindiademo.base
 
 import android.app.Application
 import android.text.TextUtils

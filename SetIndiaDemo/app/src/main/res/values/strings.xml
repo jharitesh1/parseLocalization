@@ -3,5 +3,5 @@
     <string name="strBtnTextHindi">Default</string>
     <string name="strBtnTextEnglish">Hindi</string>
     <string name="strBtnTextChina">Chinese</string>
-    <string name="txtTitle">Hello World</string>
+    <string name="title">Hello World</string>
 </resources>

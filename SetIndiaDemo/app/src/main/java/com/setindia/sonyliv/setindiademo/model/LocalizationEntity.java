@@ -10,14 +10,14 @@ public class LocalizationEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private final String locale;
-    @ColumnInfo(name = "key")
-    private final String key;
+    @ColumnInfo(name = "keyID")
+    private final String keyID;
     @ColumnInfo(name = "value")
     private final String value;
 
-    public LocalizationEntity(String locale, String key, String value) {
+    public LocalizationEntity(String locale, String keyID, String value) {
         this.locale = locale;
-        this.key = key;
+        this.keyID = keyID;
         this.value = value;
     }
 
@@ -33,8 +33,8 @@ public class LocalizationEntity {
         return locale;
     }
 
-    public String getKey() {
-        return key;
+    public String getKeyID() {
+        return keyID;
     }
 
     public String getValue() {
