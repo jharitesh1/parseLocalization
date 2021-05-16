@@ -1,8 +1,11 @@
 # parseLocalization
 
 Cloud URL for JSON - https://pastebin.com/raw/c7KrRbBL#
+
 author: Ritesh
+
 date: 16th May 2021
+
 Please see some screnshots at this level of github.
 
 First commit :
