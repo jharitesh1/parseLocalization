@@ -20,4 +20,8 @@ Third commit:
 Fourth commit:
     1) View model
 
+5th commit:
+    1) New application class
+    2) Adding parsed data to database
+
 
